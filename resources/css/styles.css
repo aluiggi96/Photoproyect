@@ -256,15 +256,58 @@ body{
     .nav-mobile h1{
         font-size: 1.25rem;
     }
+
     .nav-mobile .logo-mobile {
         margin-left: 1rem;
         width: 3rem;
     }
 
-    .nav-mobile .toggle {
-        filter: invert(1);
+    .button-menu {
         margin-right: 1rem;
         width: 2rem;
+        height: 2rem;
+        position: relative;
+    }
+    
+    .button-menu .toggle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+    }
+
+    .button-menu input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .button-menu .menu {
+        background-color: hsl(270, 50%, 50%);
+        z-index: 1;
+        top: 3.15rem;
+        right: -1rem;
+        position: absolute;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+    }
+    
+    .button-menu .menu li {
+        text-align: end;
+        list-style-type: none;
+        padding: 1rem;
+        width: 24rem;
+    }
+
+    .button-menu .menu a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .button-menu input:checked ~ .menu {
+        transform: none;
     }
 }
 
