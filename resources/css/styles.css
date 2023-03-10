@@ -5,7 +5,6 @@
     font-family: 'Roboto', sans-serif;
 }
 html {
-    -webkit-text-size-adjust: 100%;
     font-size: 16px;
 }
 
@@ -66,8 +65,8 @@ body{
     align-items: center;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
-    height: 60%;
+    width: 90%;
+    height: 80%;
     grid-template: 25% 1fr / repeat(2, 1fr);
 }
 .our-club .top,
@@ -88,9 +87,11 @@ body{
     grid-area: 1/1/2/3;
 }
 .top h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 2rem;
+    position: absolute;
+    width: 100%;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
 }
 
 .left {
@@ -314,6 +315,13 @@ body{
 }
 
 @media screen and (max-width: 426px) {
+    
+    .banner .top h1 {
+        position: absolute;
+        width: 100%;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .banner {
         height: 24rem;
@@ -323,7 +331,6 @@ body{
     .photo-of-month h1,
     .events h1 {
         font-size: 1rem;
-        height: 2.5rem;
     }
 
     .banner .left p {
